@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Rankings Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>University Rankings Prediction</h1>
+        <form id="predictionForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="university">University Name:</label>
+                    <select id="university" name="university" required>
+                        <option value="" disabled selected>Select a University</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="no_of_student">No of Student:</label>
+                    <input type="number" id="no_of_student" name="no_of_student" required>
+                </div>
+                <div class="form-group">
+                    <label for="no_of_student_per_staff">No of Student per Staff:</label>
+                    <input type="number" id="no_of_student_per_staff" name="no_of_student_per_staff" step="0.01" placeholder="e.g., 10" required>
+                </div>
+                <div class="form-group">
+                    <label for="international_student">International Student:</label>
+                    <input type="number" id="international_student" name="international_student" step="0.01" placeholder="e.g., 5000" required>
+                </div>
+                <div class="form-group">
+                    <label for="teaching_score">Teaching Score:</label>
+                    <input type="number" id="teaching_score" name="teaching_score" step="0.01" placeholder="e.g., 75.5" required>
+                </div>
+                <div class="form-group">
+                    <label for="research_score">Research Score:</label>
+                    <input type="number" id="research_score" name="research_score" step="0.01" placeholder="e.g., 80.2" required>
+                </div>
+                <div class="form-group">
+                    <label for="citations_score">Citations Score:</label>
+                    <input type="number" id="citations_score" name="citations_score" step="0.01" placeholder="e.g., 85.3" required>
+                </div>
+                <div class="form-group">
+                    <label for="industry_income_score">Industry Income Score:</label>
+                    <input type="number" id="industry_income_score" name="industry_income_score" step="0.01" placeholder="e.g., 90.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="international_outlook_score">International Outlook Score:</label>
+                    <input type="number" id="international_outlook_score" name="international_outlook_score" step="0.01" placeholder="e.g., 65.7" required>
+                </div>
+                <div class="form-group">
+                    <label for="overall_score_min">Overall Score Min:</label>
+                    <input type="number" id="overall_score_min" name="overall_score_min" step="0.01" placeholder="e.g., 70.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="overall_score_max">Overall Score Max:</label>
+                    <input type="number" id="overall_score_max" name="overall_score_max" step="0.01" placeholder="e.g., 85.0" required>
+                </div>
+                <div class="form-group">
+                    <label for="female_ratio">Female Ratio:</label>
+                    <input type="number" id="female_ratio" name="female_ratio" step="0.01" placeholder="e.g., 55.0" required>
+                </div>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="results" class="results">
+            <div id="result_model_1" class="result"></div>
+            <div id="result_model_2" class="result"></div>
+            <div id="result_model_3" class="result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
